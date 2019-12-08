@@ -4,22 +4,20 @@
 int main()
 {
     int a=0,b=0,c=0,d=0,e=0,n=0;
-	char aa[M]={'\0'};
-
-//	while(1){
+	char aa[M];
+	char * bb="";
 	b=0,c=0,d=0,e=0;
+	gets(aa);
 	for(a=0;a<M;a++)
 	{
-		scanf("%c",&aa[a]);
-		if(aa[a]=='\n')
-			break;
+		if(aa[a]=='\0')
+		break;	
 		else
-			n++;
+		n++;
 	}
-	if(aa[0]!='\n')
-	{for(a=0;a<n;a++)
+	for(a=0;a<n;a++)
 	{
-		if((aa[a]>='A'&&aa[a]<='Z')||(aa[a]>='a'&&aa[a]<='z'))
+		if(((aa[a]>='A'&&aa[a]<='Z')||(aa[a]>='a'&&aa[a]<='z')))
 			b++;
 		else if(aa[a]==' ')
 			c++;
@@ -28,12 +26,11 @@ int main()
 		else
 			e++;
 	}
-	printf("%d\n%d\n%d\n%d\n%d\n",b,c,d,e,'`');
-	}
-	else
+
+	if(strcmp(aa,bb)!=0)
 	{
-		printf("\n");
+		printf("%d\n%d\n%d\n%d",b,c,d,e);
 	}
-//	}
+
     return 0;
 }
