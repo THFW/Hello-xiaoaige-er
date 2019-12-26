@@ -22,3 +22,16 @@ foo)
 	echo '/root/script foo|bar'
 ;;
 esac
+
+if [ $# -eq 0 ];then 
+	echo 'Usage: /root/mkusers userfile'
+exit 1
+fi
+if [ ! -f $1 ];then
+	echo  "Input file not found"
+exit 1
+fi
+while read line 
+do
+useradd -s  /bin/false  $line
+done < $1 
