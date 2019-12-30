@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+
+struct Student
+{
+    char* name;
+    int number;
+};
+
+char* func()
+{
+    char p[] = "D.T.Software";
+    
+    return p;
+}
+
+void del(char* p)
+{
+    printf("%s\n", p);
+    
+    free(p);
+}
+
+int main()
+{
+    struct Student s;//由于没有初始化,产生野指针
+    char* p = func();//产生了野指针
+    
+    strcpy(s.name, p);//使用野指针
+    
+    p = (char*)malloc(5);
+    
+    strcpy(p, "D.T.Software");//产生内存越界,操作了野指针所指向的内存空间
+    
+    del(p);
+    
+    return 0;
+}

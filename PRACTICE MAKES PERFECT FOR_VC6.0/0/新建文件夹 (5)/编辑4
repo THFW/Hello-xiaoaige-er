@@ -1,0 +1,93 @@
+#include <stdio.h>
+#include "IntArray.h"
+
+int main()
+{
+    IntArray a(5);
+    
+    for(int i=0; i<a.length(); i++)
+    {
+        a.set(i, i + 1);
+    }
+    
+    for(int i=0; i<a.length(); i++)
+    {
+        int value = 0;
+        
+        if( a.get(i, value) )
+        {
+            printf("a[%d] = %d\n", i, value);
+        }
+    }
+    
+    a.free();
+    
+    return 0;   
+}
+
+
+#include "IntArray.h"
+
+IntArray::IntArray(int len)
+{
+    m_pointer = new int[len];
+    
+    for(int i=0; i<len; i++)
+    {
+        m_pointer[i] = 0;
+    }
+    
+    m_length = len;
+}
+
+int IntArray::length()
+{
+    return m_length;
+}
+
+
+bool IntArray::get(int index, int& value)
+{
+    bool ret =  (0 <= index) && (index < length());
+    
+    if( ret )
+    {
+        value = m_pointer[index];
+    }
+    
+    return ret;
+}
+
+bool IntArray::set(int index, int value)
+{
+    bool ret =  (0 <= index) && (index < length());
+    
+    if( ret )
+    {
+        m_pointer[index] = value;
+    }
+    
+    return ret;
+}
+void IntArray::free()
+{
+    delete[]m_pointer;
+}
+
+#ifndef _INTARRAY_H_
+#define _INTARRAY_H_
+
+class IntArray
+{
+private:
+    int m_length;
+    int* m_pointer;
+public:
+    IntArray(int len);
+    int length();
+    bool get(int index, int& value);
+    bool set(int index, int value);
+    void free();
+};
+
+#endif

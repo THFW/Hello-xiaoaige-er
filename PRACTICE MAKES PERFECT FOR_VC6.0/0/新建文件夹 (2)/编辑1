@@ -1,0 +1,15 @@
+p + n; <==> (unsigned int)p + n*sizeof(*p);
+
+
+int *p = NULL;
+
+p + 1 <==> 0 + 1 * sizeof(*p) <==> 0 + 1 * sizeof(int) <==> 0 + 4 <==>4
+
+a = 0xBFA00F38;
+
+a + 1 <==> 0xBFA00F38 + 1 * sizeof (*a) <==> 0xBFA00F38 + 1 * sizeof(a[0]) <==> 0xBFA00F38 + 1 * 4 <==> 0xBFA00F38 + 4 <==> 0xBFA00F3C
+
+pEnd = s + DIM(s);
+
+==> s + 5 ==> 0xbffdfd5f + 5 * sizeof(*s) <==> 0xbffdfd5f + 5 * sizeof(char) <==>  0xbffdfd5f + 5 * 1 <==> 0xbffdfd64   0xbffdfd64
+

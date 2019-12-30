@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: fangkuai - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ycl\AppData\Local\Temp\RSP4178.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/fangkuai.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp"
+]
+Creating command line "cl.exe @C:\Users\ycl\AppData\Local\Temp\RSP4178.tmp" 
+Creating temporary file "C:\Users\ycl\AppData\Local\Temp\RSP4179.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/fangkuai.pdb" /debug /machine:I386 /out:"Debug/fangkuai.exe" /pdbtype:sept 
+".\Debug\fangkuai.obj"
+]
+Creating command line "link.exe @C:\Users\ycl\AppData\Local\Temp\RSP4179.tmp"
+<h3>Output Window</h3>
+Compiling...
+fangkuai.cpp
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(58) : error C2446: '==' : no conversion from 'const int' to 'int *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(58) : error C2040: '==' : 'int [12]' differs in levels of indirection from 'const int'
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(81) : error C2446: '==' : no conversion from 'const int' to 'int *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(81) : error C2040: '==' : 'int [12]' differs in levels of indirection from 'const int'
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(93) : error C2664: 'gotoxy' : cannot convert parameter 2 from 'int *' to 'int'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(98) : error C2664: 'gotoxy' : cannot convert parameter 2 from 'int *' to 'int'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(110) : error C2440: '=' : cannot convert from 'const int' to 'int [12]'
+        There are no conversions to array types, although there are conversions to references or pointers to arrays
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(122) : error C2107: illegal index, indirection not allowed
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(134) : error C2446: '!=' : no conversion from 'const int' to 'int *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(134) : error C2040: '!=' : 'int [12]' differs in levels of indirection from 'const int'
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(144) : error C2446: '==' : no conversion from 'const int' to 'int *'
+        Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(144) : error C2040: '==' : 'int [12]' differs in levels of indirection from 'const int'
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(197) : error C2107: illegal index, indirection not allowed
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(197) : error C2440: '=' : cannot convert from 'const int' to 'int [12]'
+        There are no conversions to array types, although there are conversions to references or pointers to arrays
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(253) : error C2107: illegal index, indirection not allowed
+I:\PRACTICE MAKES PERFECT FOR_VC6.0\fangkuai\fangkuai.cpp(253) : error C2440: '=' : cannot convert from 'const int' to 'int [12]'
+        There are no conversions to array types, although there are conversions to references or pointers to arrays
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+fangkuai.exe - 16 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

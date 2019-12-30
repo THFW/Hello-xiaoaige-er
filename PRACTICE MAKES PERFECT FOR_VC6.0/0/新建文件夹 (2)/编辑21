@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+#ifndef _GNUC_
+#define _attribute_(x)
+#endif
+
+_attribute_((constructor))
+void before_main()
+{
+		printf("%s\n",_FUNCTION_);
+}
+
+_attribute_((destructor))
+void after_main()
+{
+		printf("%s\n",_FUNCTION_);
+}
+
+int main()
+{
+		printf("%s\n",_FUNCTION_);
+		
+		return 0;
+}
