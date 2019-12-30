@@ -1,0 +1,59 @@
+#include <stdio.h>
+//#define M   0  
+int main()
+{
+int i,j,m;
+while(1){
+	scanf("%d %d %d",&m,&i,&j);
+#if m			//错误的地方
+			//m是一个运行时值, #if是在编译时就确定分支
+			//所以拿m能判断出个啥.....
+	printf("m \n");
+	{
+	printf(" !=  y1\n");
+	if(i != j)
+		printf("1\n");
+	else
+		printf("0\n");
+	}
+#else 
+	{
+	printf(" ==  n1\n");
+	if(i == j)
+		printf("1\n");
+	else
+		printf("0\n");
+	}
+#endif
+}
+}
+
+m是一个运行时值, #if是在编译时就确定分支
+所以拿m能判断出个啥.....
+
+#include <stdio.h>
+#define M   1 
+int main()
+{
+int i,j,m;
+while(1){
+	scanf("%d %d",&i,&j);
+#if M
+	{
+	printf(" !=  y1\n");
+	if(i != j)
+		printf("1\n");
+	else
+		printf("0\n");
+	}
+#else 
+	{
+	printf(" ==  n1\n");
+	if(i == j)
+		printf("1\n");
+	else
+		printf("0\n");
+	}
+#endif
+}
+}
