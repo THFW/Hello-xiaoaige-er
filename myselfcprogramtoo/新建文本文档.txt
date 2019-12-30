@@ -1,0 +1,44 @@
+typedef struct student
+{
+int number;
+struct student * next;
+char name[10];
+}node;
+node *xinjian(int n)
+{
+int i;
+node *p,*q,*j;
+p=(node *)malloc(sizeof(node));
+scanf("%d",&p->number);
+scanf("%s",p->name);
+j=p;
+for(i=2;i<=n;i++)
+{
+q=p;
+p=(node *)malloc(sizeof(node));
+    q->next=p;
+scanf("%d",&p->number);
+scanf("%s",p->name);
+}
+return j;
+
+}
+void shuchu(node *head)
+{
+node *p;
+p=head;
+while(p!=NULL)
+{
+printf("%d,%s",p->number,p->name);
+printf("\n");
+p=p->next;
+}
+}
+int main()
+{
+int n;
+node *head=(node *)malloc(sizeof(node *));
+scanf("%d",&n);
+head=xinjian(n);
+shuchu(head);
+}
