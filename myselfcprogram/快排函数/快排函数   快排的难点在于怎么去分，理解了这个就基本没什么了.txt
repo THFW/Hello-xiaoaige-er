@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <time.h>
+
+void CelerityRun(int left, int right, int array[]);
+
+int main()
+{
+    int i;
+    int a[6];           //声明数组
+    srand(time(0));
+
+    /*输入数组*/
+    printf("排序之前数组：");
+    for(i=0; i<6; i++)
+    {
+        a[i] = rand()%100;      //使用随机数定义数组
+        printf("%d\t", a[i]);
+    }
+
+    CelerityRun(0, 5, a);       //调用快排函数
+
+    /*输出数组*/
+    printf("\n排序之后数组：");
+    for(i=0; i<6; i++)
+    {
+        printf("%d\t", a[i]);
+    }
+
+    return 0;
+}
+/*升序排列*/
+void CelerityRun(int left, int right, int array[])  //最左边的元素，最右边的元素，数组
+{
+    int i, j;
+    int middle, iTemp;                              //中间标号，临时数据存放iTemp
+    i = left;
+    j = right;
+    middle = array[(left+right)/2];                 //取中间标号，把中间元素作为比较标准
+    do
+    {
+        while((array[i] < middle) && (i < right))   //从左边查找，直到找到大于中间值的元素下标
+        {
+            i++;
+        }
+        while((array[j] > middle) && (j > left))    //从右边查找，直到找到小于中间值的元素下标
+        {
+            j--;
+        }
+        if(i <= j)                                  //找到大于中间值的元素和小于中间值的元素，则交换数据
+        {
+            iTemp = array[i];
+            array[i] = array[j];                    //前一个数组元素变成后一个数组元素
+            array[i] = iTemp;                       //后一个数组元素变成前一个数组元素
+            i++;
+            j--;
+        }
+    }while(i <= j) ;
+    /*输出数组*/
+    printf("\n排序中的数组：");
+    for(i=0; i<6; i++)
+    {
+        printf("%d\t", array[i]);
+    }
+    /*递归左半边*/
+    if(left < j)
+        CelerityRun(left, j, array);
+
+    /*递归右半边*/
+    if(right > i)
+        CelerityRun(i, right, array);
+}

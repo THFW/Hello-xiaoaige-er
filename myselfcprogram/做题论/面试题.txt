@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define N 100
+void GetMemory1(char*p)
+{
+	//p = (char*)malloc(sizeof(char)*N);
+	strcpy(p,"Have a good day!");	
+}
+char *GetMemory2(void)
+{
+	char p[]="Have a good day!";
+	return p;
+}
+int main(void)
+{	char str1[20];
+	char *str2=NULL;
+	GetMemory1(str1);
+	GetMemory2();
+	printf("\nstr1:%s",str1);
+	printf("\nstr2:%s",str2);	
+}
+_interrupt doublecompute_area(double radius)
+{
+	double area  = PI * radius * radius;
+	printf("Area = %f", area);
+	return area;
+}
+//函数不能传参数  double 
+/*
+typedef struct{
+    char zk_c[1010][14];
+    int sj_num;
+	int ks_num;
+}type_led_ctl;
+
+int main(void)
+{	
+	
+}
+*/
+//第二个是要返回一个char型的指针类型函数第一个是没有返回值，
+//但是没有参数传入，里面有char类型数组参数p传入 
+
+
+#include<stdio.h>
+int main()
+{
+	int a;
+	int *p;
+	p = &a;
+	printf("%d\n",(int)p);		//（int）就是转化 为整形
+	*p = 0x500;
+	printf("%d\n",a);
+	a = (int)(*(&p));
+	printf("%d\n",a);
+	a = (int)(&(*p));
+	printf("%d\n",a);
+	//printf("%d\n",*p);
+	if(a == (int)p)
+		printf("equal!\n");
+	else
+		printf("not equal!\n");
+} 
+
+#error
+编译的时候遇到这个指令,编译器直接报告error,算是手动停止程序编译的方式.

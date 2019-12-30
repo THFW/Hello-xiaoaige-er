@@ -1,0 +1,29 @@
+struct SIMPLE  sa[10];
+这种写法主要是为了兼容C
+CPP里可以省略前边的"struct"
+这个可以这么理解 
+struct 是定义一个结构体 
+typedef意思是声明一种类型 
+
+typedef struct //定义一个结构体  并且把结构体类型规定为q 
+			//这个时候q就是一个变量类型了  代表的是当前结构体  
+{	
+		float ss;
+		//int		x,y;
+		//int		cost;
+		//int		supplier;
+}q; ///Partinfo;
+ struct node{	//定义一个结构体  结构体名称为node 
+		float ss;
+		//int		x,y;
+		//int		cost;
+		//int		supplier;
+};
+int main()
+{
+		node	a;//用第一个结构体定义一个变量 
+		
+		q	b;//用第二个结构体定义变量 
+		scanf("%d %d %f",&a.x,&a.y,&b.ss);
+		printf("%d %d %f",a.x,a.y,b.ss);
+}

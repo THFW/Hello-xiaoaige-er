@@ -1,0 +1,8 @@
+SeqList *L; L=(SeqList*)malloc(sizeof(SeqList));的意思 
+
+SeqList *L; .//声明一个SepList类型的指针 没问题吧
+L=(SeqList*)malloc(sizeof(SeqList));
+//malloc表示在堆栈中分配一块内存sizeof(SeqList）是这块内存的大小 
+好了 malloc函数返回的是一个指向刚开辟的内存的指针 
+然后(SeqList*)进行一个类型转换 把返回的
+指针转换为SeqList*这种类型的 这样就可以把这个指针赋给L了 

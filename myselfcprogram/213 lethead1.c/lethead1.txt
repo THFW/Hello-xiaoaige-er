@@ -1,0 +1,31 @@
+#include <stdio.h>
+#define NAME "GIGATHINK, INC. "
+#define ADDRESS "101 Megabuck Plaza"
+#define PLACE "Megapolis, CA 94904"
+//#define WIDTH 40
+
+int starbar(int count0,char ch1);	/*声明函数*/
+
+int main(void)
+{	
+	int n;
+	char ch1 ;
+	scanf("%d %c",&n,&ch1);
+	starbar(n,ch1);
+	printf("%s\n",NAME);
+	printf("%s\n",ADDRESS);
+	printf("%s\n",PLACE);
+	starbar(n,ch1);		/*使用函数*/
+	return 0; 
+}
+
+int starbar(int count0 ,char ch)	/*定义函数*/
+{
+	int count;
+	//char ch;
+	
+	
+	for(count = 1; count <= count0; count++)
+		putchar(ch);
+	putchar('\n');
+} 

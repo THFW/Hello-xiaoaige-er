@@ -1,0 +1,72 @@
+#include <stdio.h>
+int main()
+{
+	int i,j,ij; 
+	for(ij = 0; ij < 3; ij += 1 ){
+	for(i = 3; i-ij > 0; i -- )
+		printf(" ");
+	for(j = 0; j < 2*ij - 1; j += 1 )
+		printf("*");
+	printf("\n");	
+	}
+}
+
+#include <stdio.h>
+int main()
+{
+	int i,j,ij,s,t,st,n; 
+	scanf("%d",&n);
+	for(ij = 1; ij <= n; ij += 1 ){
+	for(i = n; i-ij >= 1; i -- )
+		printf(" ");
+	for(j = 1; j <= 2*ij - 1; j += 1 )
+		printf("*");
+	printf("\n");	
+	}/*
+		for(st = n-1; st >= 1; st -- ){
+		for(t = 0; t < n-st; t += 1 )//for(j = 1; j <= 2*st - 1; j += 1 )
+		printf(" ");//printf("*");
+	    for(s = 1; s <= 2*st - 1; s += 1 )//for(i = n; i-st >= 1; i -- )
+		printf("*");//printf(" ");
+
+	printf("\n");
+	
+	}*/
+}
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+	int i,j,ij,s,t,st,n; 
+	scanf("%d",&n);
+	for(ij = 1; ij <= n; ij += 1 ){
+	for(i = n; i-ij >= 1; i -- )
+		printf(" ");
+	for(j = 1; j <= 2*ij - 1; j += 1 )
+		printf("*");
+		for(i = n; i-ij >= 1; i -- )
+		printf(" ");
+				for(i = n; i-ij >= 1; i -- )
+		printf(" ");
+	for(j = 1; j <= 2*ij - 1; j += 1 )
+		printf("*");
+	printf("\n");	
+	}
+		for(st = n-1; st >= 1; st -- ){
+		for(t = 0; t < n-st; t += 1 )//for(j = 1; j <= 2*st - 1; j += 1 )
+		printf(" ");//printf("*");
+	    for(s = 1; s <= 2*st - 1; s += 1 )//for(i = n; i-st >= 1; i -- )
+		printf("*");//printf(" ");
+			for(t = 0; t < n-st; t += 1 )//for(j = 1; j <= 2*st - 1; j += 1 )
+		printf(" ");//printf("*");
+				for(t = 0; t < n-st; t += 1 )//for(j = 1; j <= 2*st - 1; j += 1 )
+		printf(" ");//printf("*");
+	    for(s = 1; s <= 2*st - 1; s += 1 )//for(i = n; i-st >= 1; i -- )
+		printf("*");//printf(" ");
+	printf("\n");	
+	}
+}

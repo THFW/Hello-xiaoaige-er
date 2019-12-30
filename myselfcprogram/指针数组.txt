@@ -1,0 +1,37 @@
+#include <stdio.h>
+int find_max(int array[10])	//这里虽然你以为是数组
+							//实质是指针
+{
+	int i;
+	int max = array[0];
+	
+	for(i = 1; i < 10; i += 1 )
+		if(array[i]>max)
+			max = array[i];
+
+	return max;
+}
+int main()
+{
+	int a[10] ;
+	int j ;
+	int ij;
+	for(j=0; j< 10; j++)
+		a[j] = j;
+	ij = find_max(a);//ij = int find_max(int a[10]);  
+	//传递实参不带参数类型
+	//你这个函数是传递指向数组首元素的指针，所以调用时传递数组名即可
+	printf("%d",ij);
+}
+
+#include <stdio.h>
+int main(void)
+{        char *s[ ]={"one","two","three"},*p;
+        p=s[1];
+        printf("%c,%s\n",*(p+1),s[0]);
+}
+char *s[]={"one","two","tree"};
+可不可以写成char s[3][ ]={"tone","two","three"};
+
+指针数组是数组，其元素为指针，而数组指针是一个指针；很好区分的
+第一个定义是指针数组，而第二个定义的是二维数组，两个不同的概念，有不同的规定
